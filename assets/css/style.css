@@ -1,0 +1,136 @@
+/*------------------------------------
+  Default Style
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Kanit:wght@300&family=Noto+Sans+JP&display=swap');
+
+* { margin: 0; padding: 0; }
+:root {
+    --padding-side: 25px;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+body {
+    font-size: 1.6em;
+}
+a {
+    color: white;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition-property: all;
+    transition: .5s linear;
+}
+input, button {
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+/*------------------------------------
+  Header
+------------------------------------*/
+header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: black;
+    box-sizing: border-box;
+}
+.header_wrap {
+    padding: 0 var(--padding-side);
+}
+.logo {
+    height: 60px;
+    font-size: 1.2rem;
+}
+
+/*------------------------------------
+  Main
+------------------------------------*/
+main {
+    position: relative;
+    user-select: none;
+    background: black;
+}
+#canvas {
+    position: absolute;
+}
+.information {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+.information span,
+.information button,
+.information select,
+.volume_wrap {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 3px;
+    color: white;
+    background: rgb(33, 33, 33);
+}
+.volume_wrap {
+    line-height: 30px;
+}
+#volume {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+#select_sample_music option:nth-child(10) {
+    background:rgb(14, 61, 14);
+}
+#file {
+    display: none;
+}
+.information button {
+    width: 200px;
+}
+
+@media screen and (max-width: 1280px) {
+    .information span,
+    .information button,
+    .volume_wrap,
+    #file {
+        font-size: 1.2rem;
+        padding: 3px 5px;
+        margin: 0 1px;
+    }
+    .volume_wrap {
+        display: none;
+    }
+    .information button {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .information {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .information span,
+    .information button,
+    .information select,
+    .volume_wrap {
+        font-size: 1rem;
+        padding: 3px 5px;
+        margin: 0 1px;
+    }
+    .volume_wrap {
+        display: none;
+    }
+    .information button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="wrap">
+
+        <!-- ▼ ヘッダー ▼ -->
+        <header>
+            <div class="header_wrap">
+                <div class="logo">
+                    <a href="https://akkunlab.github.io"><h1>Audio Visualizer</h1></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ▼ メイン ▼ -->
+        <main>
+            <div class="information">
+                <span>設定</span>
+
+                <div class="volume_wrap">
+                    <label for="volume">音量</label>
+                    <input type="range" id="volume" min="0" max="1" value="0.5" step="0.01">
+                </div>
+                <select id="select_sample_music">
+                    <option value="" hidden>音楽を選択</option>
+                    <option value="Hikariwomate.wav">騒音のない世界 - 光を待て</option>
+                    <option value="Hikariwomate.wav">騒音のない世界 - さよなら</option>
+                    <option value="Fade.mp3">Alan Walker - Fade</option>
+                    <option value="Hope.mp3">Tobu - Hope</option>
+                    <option value="HeroesTonight.mp3">Janji - Heroes Tonight</option>
+                    <option value="Nekozilla.mp3">Different Heaven - Nekozilla</option>
+                    <option value="Cloud9.mp3">Itro & Tobu - Cloud 9</option>
+                    <option value="SkyHigh.mp3">Elektronomia - Sky High</option>
+                    <option value="load">デバイスから読み込む</option>
+                <select>
+                <input type="file" id="file">
+                <button type="button" id="button_changeColor">色を変更</button>
+                <button type="button" id="button_changeType">表示を変更</button>
+
+            </div>
+            <canvas id="canvas"></canvas>
+        </main>     
+
+    </div>
+
+    <!-- ▼ JavaScript ▼ -->
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+
+</body>
+</html>
