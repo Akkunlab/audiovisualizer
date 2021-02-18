@@ -190,7 +190,7 @@
         if (file === 'load') {
             input.click();
         } else {
-            fetch(`../assets/audio/${file}`, decode);
+            fetch(`./assets/audio/${file}`, decode);
         }
     });
     
