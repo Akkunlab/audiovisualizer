@@ -233,7 +233,8 @@
     window.onresize = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight - 60;
-        initCanvas[config.types.type](); // Canvas初期化
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height); // Canvas初期化
+        initCanvas[config.types.type](); 
     };
 
     init();
